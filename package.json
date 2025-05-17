@@ -1,16 +1,27 @@
 {
-  "name": "mern-thinkboard",
+  "name": "mern-noteboard",
   "version": "1.0.0",
+  "description": "<h1 align=\"center\">MERN Stack Note Taking App </h1>",
   "main": "index.js",
   "scripts": {
-    "install-server": "cd backend && npm install",
-    "install-client": "cd frontend && npm install",
-    "install": "npm run install-server && npm run install-client",
-    "build": "cd frontend && npm run build",
-    "start": "cd backend && npm start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd backend && node src/server.js",
+    "server": "cd backend && nodemon src/server.js",
+    "client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOlogicINname/NoteBoard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NOlogicINname/NoteBoard/issues"
+  },
+  "homepage": "https://github.com/NOlogicINname/NoteBoard#readme"
 }
